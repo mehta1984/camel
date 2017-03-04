@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jaxb:bindings xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+	xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd"
+	version="2.1">
+	<!-- localScoping="toplevel" will generate proper classes from anon child 
+		elements instead of inner classes -->
+	<jaxb:globalBindings localScoping="toplevel">
+		<jaxb:serializable uid="1" />
+	</jaxb:globalBindings>
+</jaxb:bindings>

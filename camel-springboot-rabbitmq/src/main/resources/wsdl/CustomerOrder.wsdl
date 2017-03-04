@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions targetNamespace="http://css.cubic.com/ws/cos/CustomerOrder/v1/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://css.cubic.com/ws/cos/CustomerOrder/v1/"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:err="http://css.cubic.com/ws/errors/v1/" xmlns:cmnHdr="http://css.cubic.com/ws/identifiers/v1/"
+	xmlns:wsi="http://ws-i.org/schemas/conformanceClaim/" name="CustomerOrder">
+
+	<!-- Base Service Messages -->
+	<wsdl:import namespace="http://css.cubic.com/ws/errors/v1/"
+		location="http://esb.cubic.cub/schemas/Errors.wsdl" />
+
+	<!-- Data types definition -->
+	<wsdl:types>
+		<xsd:schema>
+			<xsd:import namespace="http://css.cubic.com/ws/cos/CustomerOrder/v1/"
+				schemaLocation="CustomerOrder.xsd" />
+		</xsd:schema>
+	</wsdl:types>
+
+	<!-- Messages constructed from the data types that implement the services -->
+	<wsdl:message name="CreateOrder">
+		<wsdl:part element="tns:CreateOrder" name="CreateOrder" />
+	</wsdl:message>
+
+	<wsdl:message name="CreateOrderResponse">
+		<wsdl:part element="tns:CreateOrderResponse" name="CreateOrderResponse" />
+	</wsdl:message>
+
+	<wsdl:message name="GetOrder">
+		<wsdl:part element="tns:GetOrder" name="GetOrder" />
+	</wsdl:message>
+
+	<wsdl:message name="GetOrderResponse">
+		<wsdl:part element="tns:GetOrderResponse" name="GetOrderResponse" />
+	</wsdl:message>
+
+	<wsdl:message name="GetOrders">
+		<wsdl:part element="tns:GetOrders" name="GetOrders" />
+	</wsdl:message>
+
+	<wsdl:message name="GetOrdersResponse">
+		<wsdl:part element="tns:GetOrdersResponse" name="GetOrdersResponse" />
+	</wsdl:message>
+
+	<wsdl:message name="UpdateOrder">
+		<wsdl:part element="tns:UpdateOrder" name="UpdateOrder" />
+	</wsdl:message>
+
+	<wsdl:message name="UpdateOrderResponse">
+		<wsdl:part element="tns:UpdateOrderResponse" name="UpdateOrderResponse" />
+	</wsdl:message>
+
+	<wsdl:message name="GetOrderItem">
+		<wsdl:part element="tns:GetOrderItem" name="GetOrderItem" />
+	</wsdl:message>
+
+	<wsdl:message name="GetOrderItemResponse">
+		<wsdl:part element="tns:GetOrderItemResponse" name="GetOrderItemResponse" />
+	</wsdl:message>
+
+	<wsdl:message name="GetOrderItems">
+		<wsdl:part element="tns:GetOrderItems" name="GetOrderItems" />
+	</wsdl:message>
+
+	<wsdl:message name="GetOrderItemsResponse">
+		<wsdl:part element="tns:GetOrderItemsResponse" name="GetOrderItemsResponse" />
+	</wsdl:message>
+
+	<!-- The service as named operation. -->
+	<wsdl:portType name="CustomerOrder">
+		<wsdl:operation name="CreateOrder">
+			<wsdl:documentation>
+				The CreateOrder operation
+				$Id: CustomerOrder.wsdl 10580 2015-11-04 06:37:45Z crossingw $
+			</wsdl:documentation>
+			<wsdl:input message="tns:CreateOrder" />
+			<wsdl:output message="tns:CreateOrderResponse" />
+			<wsdl:fault name="SystemFault" message="err:SystemFault"></wsdl:fault>
+			<wsdl:fault name="BusinessFault" message="err:BusinessFault"></wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="GetOrder">
+			<wsdl:documentation>
+				The GetOrder Operation
+				$Id: CustomerOrder.wsdl 10580 2015-11-04 06:37:45Z crossingw $
+			</wsdl:documentation>
+			<wsdl:input message="tns:GetOrder" />
+			<wsdl:output message="tns:GetOrderResponse" />
+			<wsdl:fault name="SystemFault" message="err:SystemFault"></wsdl:fault>
+			<wsdl:fault name="BusinessFault" message="err:BusinessFault"></wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="GetOrders">
+			<wsdl:documentation>
+				GetOrders operation
+				$Id: CustomerOrder.wsdl 10580 2015-11-04 06:37:45Z crossingw $
+			</wsdl:documentation>
+			<wsdl:input message="tns:GetOrders" />
+			<wsdl:output message="tns:GetOrdersResponse" />
+			<wsdl:fault name="SystemFault" message="err:SystemFault"></wsdl:fault>
+			<wsdl:fault name="BusinessFault" message="err:BusinessFault"></wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="UpdateOrder">
+			<wsdl:documentation>
+				UpdateOrder operation
+			</wsdl:documentation>
+			<wsdl:input message="tns:UpdateOrder" />
+			<wsdl:output message="tns:UpdateOrderResponse" />
+			<wsdl:fault name="SystemFault" message="err:SystemFault"></wsdl:fault>
+			<wsdl:fault name="BusinessFault" message="err:BusinessFault"></wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="GetOrderItem">
+			<wsdl:documentation>
+				GetorderItem operation
+			</wsdl:documentation>
+			<wsdl:input message="tns:GetOrderItem" />
+			<wsdl:output message="tns:GetOrderItemResponse" />
+			<wsdl:fault name="SystemFault" message="err:SystemFault"></wsdl:fault>
+			<wsdl:fault name="BusinessFault" message="err:BusinessFault"></wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="GetOrderItems">
+			<wsdl:documentation>
+				GetOrderItems operation
+			</wsdl:documentation>
+			<wsdl:input message="tns:GetOrderItems" />
+			<wsdl:output message="tns:GetOrderItemsResponse" />
+			<wsdl:fault name="SystemFault" message="err:SystemFault"></wsdl:fault>
+			<wsdl:fault name="BusinessFault" message="err:BusinessFault"></wsdl:fault>
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<!-- Implementation of the service defined in the portType -->
+	<wsdl:binding name="CustomerOrder" type="tns:CustomerOrder">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="CreateOrder">
+			<soap:operation
+				soapAction="http://css.cubic.com/ws/cos/CustomerOrder/v1/CreateOrder" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="SystemFault">
+				<soap:fault use="literal" name="SystemFault" />
+			</wsdl:fault>
+			<wsdl:fault name="BusinessFault">
+				<soap:fault use="literal" name="BusinessFault" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="GetOrder">
+			<soap:operation
+				soapAction="http://css.cubic.com/ws/cos/CustomerOrder/v1/GetOrder" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="SystemFault">
+				<soap:fault use="literal" name="SystemFault" />
+			</wsdl:fault>
+			<wsdl:fault name="BusinessFault">
+				<soap:fault use="literal" name="BusinessFault" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="GetOrders">
+			<soap:operation
+				soapAction="http://css.cubic.com/ws/cos/CustomerOrder/v1/GetOrders" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="SystemFault">
+				<soap:fault use="literal" name="SystemFault" />
+			</wsdl:fault>
+			<wsdl:fault name="BusinessFault">
+				<soap:fault use="literal" name="BusinessFault" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="UpdateOrder">
+			<soap:operation
+				soapAction="http://css.cubic.com/ws/cos/CustomerOrder/v1/UpdateOrder" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="SystemFault">
+				<soap:fault use="literal" name="SystemFault" />
+			</wsdl:fault>
+			<wsdl:fault name="BusinessFault">
+				<soap:fault use="literal" name="BusinessFault" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="GetOrderItem">
+			<soap:operation
+				soapAction="http://css.cubic.com/ws/cos/CustomerOrder/v1/GetOrderItem" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="SystemFault">
+				<soap:fault use="literal" name="SystemFault" />
+			</wsdl:fault>
+			<wsdl:fault name="BusinessFault">
+				<soap:fault use="literal" name="BusinessFault" />
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="GetOrderItems">
+			<soap:operation
+				soapAction="http://css.cubic.com/ws/cos/CustomerOrder/v1/GetOrderItems" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+			<wsdl:fault name="SystemFault">
+				<soap:fault use="literal" name="SystemFault" />
+			</wsdl:fault>
+			<wsdl:fault name="BusinessFault">
+				<soap:fault use="literal" name="BusinessFault" />
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="CustomerOrder">
+		<wsdl:documentation>Handle Customer Orders</wsdl:documentation>
+		<wsdl:port binding="tns:CustomerOrder" name="CustomerOrder">
+			<wsdl:documentation>
+				<wsi:Claim conformsTo="http://ws-i.org/profiles/basic/1.0" />
+			</wsdl:documentation>
+			<soap:address location="http://localhost:9080/webservices/customerorder" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
