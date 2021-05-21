@@ -12,7 +12,7 @@
 		<cxf-version>3.1.7</cxf-version>
 		<jetty-plugin-version>9.3.13.M0</jetty-plugin-version>
 		<spring-version>4.2.5.RELEASE</spring-version>
-		<camel-version>2.18.0</camel-version>
+		<camel-version>2.25.1</camel-version>
 		<spring.boot-version>1.4.1.RELEASE</spring.boot-version>
 	</properties>
 
